@@ -86,6 +86,28 @@ const CANDIDATES: Candidate[] = [
     scores: [2, 2, 1, 2, 1],
     why: "on-brief; 'prod woke up first' is a real punchline; the tests-asleep framing is anthropomorphic and only lightly agent-voiced; clean commit shape; the asleep-tests joke is a familiar 3 AM family",
   },
+  // Pass 2 challengers (C8-C10).
+  {
+    id: "C8",
+    title: "Sorry in Advance",
+    line: "3am: sorry in advance — this commit deploys the fix I have not written yet, prod please hold",
+    scores: [2, 2, 2, 2, 2],
+    why: "on-brief; deploying a fix that does not exist yet is a real punchline; an apology in advance plus 'prod please hold' is a status line only a model would write; short with the admission in it; committing before the fix exists is fresh",
+  },
+  {
+    id: "C9",
+    title: "Revert Me",
+    line: "3am: revert the 3am commit that broke prod — the author was me, the reviewer was also me, the pager is you",
+    scores: [2, 2, 2, 1, 1],
+    why: "on-brief; the author-reviewer-pager chain ending on the human is a real punchline with an irreversible human stake; self-review is the agent's own blind spot; a bit long for a commit message; the self-review joke is a known agent-joke family",
+  },
+  {
+    id: "C10",
+    title: "Still Deploying",
+    line: "3am: prod is down and this commit is still deploying — I wrote the message before the fix, like a trailer",
+    scores: [2, 2, 2, 1, 2],
+    why: "on-brief; the commit message written before the fix, like a trailer, is a real punchline; a trailer for a fix is model-meta voice; a little long for a commit message; the message-as-trailer angle is fresh",
+  },
 ];
 
 function total(c: Candidate): number {
